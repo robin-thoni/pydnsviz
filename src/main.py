@@ -6,6 +6,8 @@ import dns.tsigkeyring
 
 import argparse
 
+import graphviz
+
 import pydnsviz.argparseactions
 import pydnsviz.options
 import pydnsviz.mapper
@@ -55,7 +57,8 @@ def main(argv):
                 z = dns.zone.from_file(f, zone.name, relativize=False)
         zones.append(z)
 
-    dot = pydnsviz.mapper.map_zones(zones)
+    dot = graphviz.Digraph(comment='DNS')
+    pydnsviz.mapper.map_zones(zones, dot)
     print(dot.source)
 
 

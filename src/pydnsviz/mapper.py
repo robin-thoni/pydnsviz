@@ -12,9 +12,7 @@ import dns.rdtypes.IN.AAAA
 import dns.rdtypes.IN.SRV
 
 
-def map_zones(zones: typing.List[dns.zone.Zone], record_filter: typing.Callable = None):
-    dot = graphviz.Digraph(comment='DNS')
-
+def map_zones(zones: typing.List[dns.zone.Zone], dot: graphviz.Digraph, record_filter: typing.Callable = None):
     for zone in zones:
         for (name, node) in zone.nodes.items():
             for rdataset in node.rdatasets:
@@ -40,5 +38,3 @@ def map_zones(zones: typing.List[dns.zone.Zone], record_filter: typing.Callable 
                             dot.edge(name.to_text(), record.target.to_text(), 'SRV')
                         else:
                             print('Not handled:', record)
-
-    return dot
