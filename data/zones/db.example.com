@@ -1,6 +1,6 @@
 $ORIGIN .
 $TTL 86400	; 1 day
-site1.example.com	IN SOA	ns1.example.com. hostmaster.example.com. (
+example.com	IN SOA	ns1.example.com. hostmaster.example.com. (
 				2002022402 ; serial
 				10800      ; refresh (3 hours)
 				15         ; retry (15 seconds)
@@ -10,8 +10,7 @@ site1.example.com	IN SOA	ns1.example.com. hostmaster.example.com. (
 $TTL 600	; 10 minutes
 			NS	ns1.example.com.
 			NS	ns2.example.com.
-$ORIGIN site1.example.com.
+$ORIGIN example.com.
 $TTL 600	; 10 minutes
-serv1			CNAME	_entrypoint1
-serv2			CNAME	_entrypoint1
-_entrypoint1    A	    42.42.42.20
+ns1 			A   	42.42.42.10
+ns2 			A   	42.42.42.11
