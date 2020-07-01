@@ -1,7 +1,7 @@
 PyDnsViz
 ========
 
-CLI tool to visualize DNS record in a graph to show dependencies
+CLI tool to visualize DNS records in a graph to show dependencies
 
 ![example.com](README.md.d/example.com.svg)
 

@@ -9,7 +9,7 @@ setup(
 
     description="CLI tool to visualize DNS zones",
     long_description="""\
-CLI tool to visualize DNS record in a graph to show dependencies""",
+CLI tool to visualize DNS records in a graph to show dependencies""",
 
     url='https://github.com/robin-thoni/pydnsviz',
     author="Robin Thoni",
