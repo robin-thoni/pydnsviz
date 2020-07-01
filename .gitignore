@@ -1,2 +1,5 @@
 .idea/
 /data/keys/
+/build/
+/dist/
+/pydnsviz.egg-info/
