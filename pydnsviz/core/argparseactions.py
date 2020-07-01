@@ -1,7 +1,7 @@
 import argparse
 import re
 
-from pydnsviz.options import *
+from pydnsviz.core.options import *
 
 
 def parse_tsig_key(name_data: str):

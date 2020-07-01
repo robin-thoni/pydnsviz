@@ -10,6 +10,7 @@ import dns.rdtypes.ANY.SPF
 import dns.rdtypes.IN.A
 import dns.rdtypes.IN.AAAA
 import dns.rdtypes.IN.SRV
+import dns.zone
 
 
 def map_zones(zones: typing.List[dns.zone.Zone], dot: graphviz.Digraph, record_filter: typing.Callable = None):
